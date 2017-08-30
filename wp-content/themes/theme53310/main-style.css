@@ -8767,8 +8767,7 @@ body #motopress-main.main-holder .content-holder ul.products li.product .add_to_
 body #motopress-main.main-holder .content-holder ul.products li.product .add_to_cart_button:hover, body #motopress-main.main-holder .content-holder ul.products li.product .btn:hover { background:#fd7716; }
 @media (min-width: 980px) {
 	body #motopress-main.main-holder .content-holder ul.products li.product .add_to_cart_button.added, body #motopress-main.main-holder .content-holder ul.products li.product .btn.added {
-		padding-left:32px;
-		padding-right:8px;
+		padding: 12px 32px 14px;
 	}
 }
 body #motopress-main.main-holder .content-holder ul.products li.product .add_to_cart_button.added:before, body #motopress-main.main-holder .content-holder ul.products li.product .btn.added:before {
@@ -10673,4 +10672,27 @@ body #motopress-main.main-holder .cart-holder .widget_shopping_cart_content .but
 	font-weight: 500;
 	text-align: center;
 	padding: 3px 8px 3px;
+}
+.pagination .total-pages {
+	display: inline-block;
+	position: absolute;
+	height: 27px;
+	margin-left: 8px;
+	padding-top: 8px;
+}
+.cart-wrapper .ci-count {
+	position: absolute;
+	top: 2px;
+	left: 48px;
+	display: inline-block;
+	padding: 1px;
+	font-size: 12px;
+	line-height: 14px;
+	letter-spacing: -1px;
+	color: #fff;
+	background-color: #da1026;
+	border-radius: 7px;
+	width: 14px;
+	text-align: center;
+	z-index: 99;
 }
