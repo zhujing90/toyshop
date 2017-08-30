@@ -1,0 +1,121 @@
+@filter-fz: 18px;
+@filter-lh: 23px;
+@filter-color: @textColor;
+@filter-hover: @white;
+@filter-fw: 700;
+@filter-tt: none;
+@filter-ff: @baseFontFamily;
+
+.filter-wrapper {
+  text-align: right;
+  margin-top: 22px;
+  margin-bottom: 9px;
+  strong {
+    font-family: @filter-ff;
+    font-weight: @filter-fw;
+    color: @filter-color;
+    text-transform: @filter-tt;
+    font-size: @filter-fz;
+    line-height: @filter-lh;
+    padding: 0;
+    margin: 14px 0 0 0;
+    @media (max-width: 979px) {
+      display: block;
+      margin-right: 10px;
+    }
+  }
+}
+
+.nav-pills {
+  li {
+    text-align: center;
+    margin: 0 0 0 6px;
+    @media (max-width: 979px) {
+      margin-left: 0;
+      float: left;
+    }
+    @media (max-width: 767px) {
+      float: none;
+    }
+    &:first-child {
+      margin-left: 33px;
+      @media (max-width: 979px) {
+        margin-left: 0;
+      }
+    }
+    &+li {
+      position: relative;
+    }
+    a {
+      border-radius: 4px;
+      background: transparent;
+      font-family: @filter-ff;
+      color: @filter-color;
+      text-transform: @filter-tt;
+      font-size: @filter-fz;
+      line-height: @filter-lh;
+      font-weight: @filter-fw;
+      padding: 12px 30px 14px;
+      border: none;
+      .box-sizing(border-box);
+      &:hover {
+        color: @filter-hover;
+        background: @green;
+      }
+      &:focus {
+        color: @filter-hover;
+        background: @green;
+        &:hover {
+          background: @green;
+        }
+      }
+    }
+    &.active {
+      a {
+        color: @filter-hover;
+        background: @grayDarker;
+      }
+    }
+  }
+}
+
+.portfolio_item {
+  margin-bottom: 44px;
+  text-align: left;
+  .portfolio_item_holder {
+    padding: 0;
+    border: none;
+    .transition(all 300ms ease);
+    figure {
+      margin: 0;
+    }
+  }
+
+  .caption__portfolio {
+    padding: 22px 25px;
+    background: @white;
+    border: 1px solid @bc1;
+    h3 {
+      margin: 0 0 2px 0;
+      position: relative;
+      @media (max-width: 767px) {
+        line-height: 24px;
+        font-size: 20px;
+      }
+      a {
+        font-size: 35px;
+        line-height: 39px;
+        font-weight: 100;
+        text-transform: uppercase;
+        color: @textColor;
+        @media (max-width: 767px) {
+          font-size: 20px;
+          line-height: 24px;
+        }
+        &:hover {
+          color: @green;
+        }
+      }
+    }
+  }
+}

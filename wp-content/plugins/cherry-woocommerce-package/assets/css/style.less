@@ -1,0 +1,90 @@
+/**
+ * Cherry WooCommerce package styles
+ */
+.cherry-badge {
+	&:before {
+		content: attr(data-badge-text);
+		font-size: 11px;
+		line-height: 12px;
+		padding: 2px 2px 1px;
+		text-transform: uppercase;
+		display: inline-block;
+		color: #fff;
+		background: red;
+		float: right;
+		margin: -6px 0 0 4px;
+	}
+	
+	&.cherry-badge-new {
+		&:before {
+			background: green;
+		}
+	}
+
+	&.cherry-badge-hot {
+		&:before {
+			background: red;
+		}
+	}
+
+	&.cherry-badge-sale {
+		&:before {
+			background: orange;
+		}
+	}
+}
+
+.sf-menu > li > .cherry-badge {
+	&:before {
+		content: "";
+		padding: 0;
+		margin: 0;
+	}
+}
+
+.sf-menu .cherry-badge-content {
+	font-size: 11px;
+	line-height: 12px;
+	padding: 2px 2px 1px;
+	text-transform: uppercase;
+	display: inline-block;
+	color: #fff;
+	background: red;
+	float: right;
+	margin: -6px 0 0 4px;
+
+	.cherry-badge-new > & {
+		background: green;
+	}
+
+	.cherry-badge-hot > & {
+		background: red;
+	}
+
+	.cherry-badge-sale > & {
+		background: orange;
+	}
+}
+
+nav.nav.footer-nav {
+	overflow: visible;
+}
+
+.cherry-wc-account {
+	position: relative;
+	float: right;
+	margin: 0 0 0 35px;
+	line-height: 20px;
+}
+
+.cherry-wc-account_content {
+	display: none;
+	position: absolute;
+	top: 100%;
+	margin: 5px 0 0 0;
+	width: 200px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	z-index: 99;
+}

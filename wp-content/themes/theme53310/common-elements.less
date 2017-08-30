@@ -1,0 +1,213 @@
+//Links
+a {
+  .transition(all 300ms ease);
+}
+
+//el On sale
+.onsale {
+  background: @pink !important;
+  font-size: 17px;
+  color: @white;
+  line-height: 27px;
+  font-family: @baseFontFamily;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 0;
+  padding: 8px 10px 1px;
+  text-shadow: none;
+  .box-shadow(none);
+  min-height: 0;
+  min-width: 0;
+  position: absolute;
+  top: 0;
+  left: 30px;
+  right: auto;
+  margin: 0;
+  @media (max-width: 979px) {
+    left: 10px;
+  }
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 12px 64px 0 0;
+    border-color: @pink transparent transparent transparent;
+  }
+}
+
+//Thumbnail
+.thumbnail, .featured-thumbnail {
+  padding: 0;
+  border: none;
+  background-image: none;
+  .box-shadow(none);
+  a {
+    border: none;
+  }
+}
+
+//Zoom icon
+.zoom-icon:before {
+  font-family: FontAwesome;
+  top: -100%;
+  margin-top: -62.5px;
+  left: -100%;
+  margin-left: -62.5px;
+  font-size: 0;
+  line-height: 0;
+  width: 125px;
+  height: 125px;
+  background: url(images/zoom-icon.png) no-repeat center center;
+  background-size: contain;
+  color: @black;
+  text-align: center;
+  -webkit-transition: top 300ms, left 300ms, -webkit-transform 1s;  /* For Safari 3.1 to 6.0 */
+  transition: top 300ms, left 300ms, transform 1s;
+  content: '\f002';
+  bottom: -300px;
+  @media (max-width: 979px) {
+    width: 40px;
+    height: 40px;
+    margin-left: -20px;
+    margin-top: -20px;
+  }
+}
+.zoom-icon {
+  .transition(all 500ms ease);
+  background: rgba(0,0,0, .0);
+  &:hover {
+    background: rgba(0, 0, 0, .5);
+    &:before {
+      top: 50%;
+      left: 50%;
+      .rotate(720deg);
+    }
+  }
+}
+
+//Title section for all pages
+.title-section {
+  padding: 14px 30px 27px;
+  background: @grayDarker;
+  overflow: hidden;
+  margin-bottom: 17px;
+  @media (max-width: 767px) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .title-header {
+    position: relative;
+    text-transform: uppercase;
+    z-index: 2;
+    float: none;
+    font-size: 49px;
+    line-height: 53px;
+    font-weight: 700;
+    color: @white;
+    margin-bottom: 0;
+    text-rendering: auto;
+    @media (max-width: 979px) {
+      font-size: 25px;
+      line-height: 30px;
+    }
+  }
+}
+
+//Breadcrumb
+*[class*="breadcrumb"], *[id*="breadcrumb"]{
+  float: none;
+  margin: 12px 0 !important;
+  padding: 6px 0;
+  list-style: none;
+  border-top: 1px solid #575757;
+  border-bottom: 1px solid #575757;
+  position: relative;
+  z-index: 2;
+  background-color: transparent;
+  .border-radius(@baseBorderRadius);
+  text-shadow: none;
+  font-size: 15px;
+  line-height: 23px;
+  font-weight: 300;
+  text-transform: none;
+  color: @green;
+  li {
+    &+li {
+      margin-left: 5px;
+    }
+    text-shadow: none;
+    &.active {
+      color: @white;
+    }
+  }
+  a {
+    text-shadow: none;
+    color: @green;
+    &:hover{
+      color: @pink;
+    }
+  }
+}
+
+.breadcrumb__t li.divider {
+  background-color: rgba(0, 0, 0, 0);
+  border: 0 none;
+  font-size: 15px;
+  line-height: 23px;
+  font-weight: 300;
+  text-shadow: none;
+  color: @white;
+  margin-left: 5px;
+  &:after {
+    color: @white;
+  }
+}
+
+h2 {
+  strong {
+    font-weight: 100;
+  }
+  @media (max-width: 979px) {
+    font-size: 30px;
+    line-height: 35px;
+  }
+}
+
+//Content box
+.content_box {
+  background: @white;
+  &:after,
+  &:before {
+    background: @white;
+  }
+}
+
+//List
+.list.styled > ul {
+  margin: 0;
+  li {
+    font-size: 15px;
+    line-height: 23px;
+    text-transform: none;
+    color: @linkColorHover;
+    margin: 0;
+    font-weight: 300;
+    &:before {
+      display: none;
+    }
+  }
+
+}
+
+//Testimonial
+.testimonial {
+  border: none;
+  background: #fbf8ec;
+}
+

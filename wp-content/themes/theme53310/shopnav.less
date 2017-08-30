@@ -1,0 +1,147 @@
+//Shop menu
+@fz: 15px;
+@lh: 23px;
+@fw: 300;
+@tt: none;
+@color: @green;
+@color-hover: @white;
+
+#shopnav {
+  text-align: left;
+  li {
+    text-transform: none;
+    padding: 0;
+    margin-right: 22px;
+    @media (max-width: 479px) {
+      display: block;
+    }
+    @media (max-width: 479px) {
+      margin-right: 0;
+    }
+    a {
+      font-size: @fz;
+      line-height: @lh;
+      font-weight: @fw;
+      font-family: @baseFontFamily;
+      text-transform: @tt;
+      color: @color;
+      position: relative;
+      padding-left: 12px;
+      @media (max-width: 479px) {
+        padding-left: 0;
+      }
+      &:before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-family: FontAwesome;
+        content: '\f0da';
+        font-size: 12px;
+        line-height: 23px;
+        color: @pink;
+        .transition(all 300ms ease);
+        @media (max-width: 479px) {
+          display: none;
+        }
+      }
+      &:hover {
+        color: @color-hover;
+        &:before {
+          color: @green;
+        }
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    display: inline-block;
+    text-align: center;
+  }
+}
+
+.cherry-wc-account {
+  padding: 0;
+  margin: 5px 0 0 0;
+  display: inline-block;
+  @media (max-width: 767px) {
+    float: none;
+    display: block;
+  }
+  &_title {
+    font-size: @fz;
+    line-height: @lh;
+    font-weight: @fw;
+    text-transform: @tt;
+    color: @color;
+    padding-left: 12px;
+    position: relative;
+    @media (max-width: 479px) {
+      padding-left: 0;
+    }
+    &:before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      content: '\f0da';
+      font-size: 12px;
+      line-height: @lh;
+      color: @pink;
+      margin: 0;
+      .transition(all 300ms ease);
+      @media (max-width: 479px) {
+        display: none;
+      }
+    }
+    &:after {
+      display: none;
+    }
+    &:hover {
+      color: @color-hover;
+      &:before {
+        color: @pink;
+      }
+    }
+  }
+
+  &_content {
+    left: 50%;
+    margin: 7px 0 0 -100px;
+    background: @white;
+    border-radius: 5px;
+  }
+
+  &_list {
+    li {
+      font: 300 15px/35px @baseFontFamily;
+      padding-left: 12px;
+      position: relative;
+      &:before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-family: FontAwesome;
+        content: '\f0da';
+        font-size: 12px;
+        line-height: 35px;
+        color: @grayDarker;
+        margin: 0;
+        .transition(all 300ms ease);
+      }
+      a {
+        color: @linkColorHover;
+        &:hover {
+          color: @green;
+        }
+      }
+    }
+  }
+
+  &_auth {
+    a {
+      color: @grayDark;
+      font: 700 15px/23px @baseFontFamily;
+      &:hover {
+        color: @pink;
+      }
+    }
+  }
+}

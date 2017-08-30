@@ -1,0 +1,210 @@
+//Sidebar
+#sidebar {
+  padding-top: 20px;
+  //Header
+  h3 {
+    font: 700 20px/24px @baseFontFamily;
+    color: @white;
+    display: block;
+    text-transform: uppercase;
+    position: relative;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-top: 6px;
+    @media (min-width: 1200px) {
+      font: 700 36px/40px @baseFontFamily;
+    }
+  }
+
+  #woocommerce_product_search-2 {
+    input[type="search"] {
+      width: 100% !important;
+      height: 40px;
+      line-height: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      .box-sizing(border-box);
+      @media (max-width: 767px) {
+        width: 50%;
+      }
+    }
+  }
+
+  #yith-woocompare-widget-2 {
+    .compare.button, .clear-all {
+      .button_mixin();
+      margin: 5px !important;
+      padding: 0 !important;
+      background: transparent !important;
+      font-size: @baseFontSize !important;
+      line-height: @baseLineHeight !important;
+      &:before,
+      &:after {
+        display: none;
+      }
+      &:hover {
+        background: none;
+        color: @white;
+      }
+    }
+  }
+
+  #woocommerce_layered_nav_filters-2, #woocommerce_layered_nav-2 {
+    ul {
+      li {
+        margin: 0 5px 5px 0;
+      }
+    }
+  }
+
+  //Widget
+  .widget {
+    margin-bottom: 17px;
+    background: @pink;
+    padding: 20px 30px 30px 30px;
+    @media (max-width: 1199px) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    @media (max-width: 979px) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    &#my-recent-comments-2 {
+      background: #242323;
+    }
+
+    #wp-calendar {
+      @media (min-width: 768px) and (max-width: 1199px) {
+        width: 90%;
+        font-size: 12px;
+        td {
+          padding: 0;
+        }
+      }
+    }
+
+    .widget_shopping_cart_content {
+      .button {
+        margin: 0 5px 5px 0;
+      }
+    }
+
+    .remove {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      line-height: 15px;
+      text-align: center;
+      font-size: 14px;
+      text-decoration: none;
+      color: @linkColor !important;
+      padding: 0 !important;
+      text-align: left;
+      &:hover {
+        color: @white !important;
+        border: none;
+        text-decoration: none !important;
+      }
+    }
+
+    .button {
+      background: @bc1;
+      padding: 10px;
+      &:after,
+      &:before {
+        display: none;
+      }
+      &:hover {
+        background: @green;
+        color: @white;
+      }
+    }
+
+    //List
+    ul {
+      margin: 0;
+      li {
+        list-style: none;
+        font-size: 15px;
+        line-height: 23px;
+        text-transform: none;
+        color: @white;
+        margin: 0;
+        font-weight: 300;
+        a {
+          color: @white;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+        &:before {
+          display: none;
+        }
+      }
+    }
+
+    ul.comments-custom {
+      padding: 0;
+      background: #242323;
+      li {
+        h4 {
+          font-size: 17px;
+          line-height: 27px;
+          color: #fd7716;
+        }
+        time {
+          font-size: 17px;
+          line-height: 27px;
+          color: @green;
+        }
+      }
+      figure {
+        @media (max-width: 979px) {
+          position: relative;
+          display: block;
+          float: none;
+          margin-bottom: 10px;
+          text-align: left;
+          img {
+            margin-left: 0;
+            margin-right: 0;
+          }
+        }
+      }
+      li {
+        position: relative;
+        margin-bottom: 20px;
+      }
+    }
+
+    //Comments widget
+    .comments-custom {
+      .comments-custom_h_author {
+        font-size: 17px;
+        line-height: 27px;
+        color: #fd7716;
+      }
+      &_txt {
+        padding: 0;
+        border-top: none;
+        a {
+          text-decoration: none;
+          text-transform: none;
+          font-size: 17px;
+          line-height: 27px;
+          font-weight: 300;
+          color: @white;
+          display: inline-block;
+          position: relative;
+          margin-top: 5px;
+          &:hover,
+          &:active {
+            text-decoration: none;
+            color: @green;
+          }
+        }
+      }
+    }
+  }
+}

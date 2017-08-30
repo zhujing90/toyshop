@@ -1,0 +1,249 @@
+//Menu
+@menu-color-hover: @linkColorHover;
+@menu-text-transform: uppercase;
+@stuck-menu-background: @grayDarker;
+
+//First level sub-menu
+@sub-menu-width: 204px;
+@sub-menu-border-radius: 4px;
+@sub-menu-background: @grayDarker;
+@sub-menu-font-size: 15px;
+@sub-menu-line-height: 15px;
+@sub-menu-font-family: @baseFontFamily;
+@sub-menu-font-weight: 300;
+@sub-menu-transform: none;
+@sub-menu-color: @white;
+@sub-menu-color-hover: @green;
+
+
+//Second level sub-menu
+@sub-sub-menu-background: @sub-menu-background;
+@sub-sub-menu-font-size: @sub-menu-font-size;
+@sub-sub-menu-line-height: @sub-menu-line-height;
+@sub-sub-menu-font-family: @sub-menu-font-family;
+@sub-sub-menu-font-weight: @sub-menu-font-weight;
+@sub-sub-menu-color: @sub-menu-color;
+@sub-sub-menu-transform: @sub-menu-transform;
+
+.nav__primary {
+  margin-left: 0 !important;
+  padding: 0;
+  position: relative;
+  z-index: 2;
+  @media (max-width: 767px) {
+    padding: 0 !important;
+  }
+  .sf-menu {
+    .cherry-badge {
+      &-new {
+        .cherry-badge-content {
+          background: @green;
+          &:before {
+            border-color: @green transparent transparent transparent;
+          }
+        }
+      }
+      &-sale {
+        .cherry-badge-content {
+          background: @pink;
+          &:before {
+            border-color: @pink transparent transparent transparent;
+          }
+        }
+      }
+      &-hot {
+        .cherry-badge-content {
+          background: @orange;
+          &:before {
+            border-color: @orange transparent transparent transparent;
+          }
+        }
+      }
+    }
+    .cherry-badge-content {
+      position: absolute;
+      font: 300 15px/23px @baseFontFamily;
+      color: @white;
+      padding-left: 11px;
+      padding-right: 11px;
+      text-transform: none;
+      margin: -48px 0 0 -37px;
+      &:before {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        left: 50%;
+        margin-left: -8px;
+        bottom: -8px;
+        border-style: solid;
+        border-width: 8px 8px 0 8px;
+      }
+    }
+    li {
+      margin-right: 33px;
+      a {
+        text-transform: @menu-text-transform;
+        border: none;
+        padding: 0;
+        font-weight: 700;
+        @media (max-width: 979px) {
+          font-size: 14px !important;
+        }
+        &:hover {
+          color: @menu-color-hover;
+        }
+        .sf-sub-indicator {
+          right: -17px;
+          margin-top: -10px;
+        }
+      }
+      &.current_page_item,
+      &.sfHover {
+        > a {
+          color: @menu-color-hover;
+        }
+      }
+
+      &.current_page_item {
+        > a {
+          font-weight: 600;
+        }
+      }
+
+      //First level sub-menu
+      ul {
+        width: @sub-menu-width;
+        left: 50%;
+        margin-left: -204px/2px;
+        background: @sub-menu-background;
+        top: 74px;
+        padding: 35px 30px;
+        text-align: left;
+        border-radius: @sub-menu-border-radius;
+        .box-sizing(border-box);
+        @media (max-width: 1199px) {
+          top: 58px;
+        }
+        .sf-sub-indicator {
+          right: -20px;
+        }
+        li {
+          text-align: left;
+          margin-left: 0;
+          margin-right: 0;
+          background: none;
+          float: none;
+          a {
+            background: none;
+            display: inline-block;
+            font-size: @sub-menu-font-size;
+            line-height: @sub-menu-line-height;
+            font-family: @sub-menu-font-family;
+            font-weight: @sub-menu-font-weight;
+            color: @sub-menu-color;
+            text-align: left;
+            text-transform: @sub-menu-transform;
+            position: relative;
+            padding-left: 12px;
+            &:before {
+              position: absolute;
+              left: 0;
+              top: 1px;
+              font-family: FontAwesome;
+              content: '\f0da';
+              font-size: 12px;
+              line-height: 15px;
+              color: @green;
+              margin: 0;
+              .transition(all 300ms ease);
+            }
+            &:hover {
+              color: @sub-menu-color-hover;
+              &:before {
+                color: @white;
+              }
+            }
+          }
+          &.sfHover {
+            > a {
+              color: @sub-menu-color-hover;
+              background: transparent;
+              &:before {
+                color: @white;
+              }
+            }
+          }
+          &+li {
+            margin-top: 20px;
+          }
+        }
+
+        //Second level sub-menu
+        ul {
+          background: @sub-sub-menu-background;
+          top: -82px;
+          left: 181px;
+          margin-left: 0;
+          li {
+            a {
+              font-size: @sub-sub-menu-font-size;
+              line-height: @sub-sub-menu-line-height;
+              font-family: @sub-sub-menu-font-family;
+              font-weight: @sub-sub-menu-font-weight;
+              color: @sub-sub-menu-color;
+              text-transform: @sub-sub-menu-transform;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    width: 100%;
+    padding: 0 10px;
+    .box-sizing(border-box);
+  }
+
+  //Stuck menu styles
+  &.isStuck {
+    padding: 10px;
+    margin-top: 0;
+    left: 0;
+    right: 0;
+    background: @stuck-menu-background;
+    text-align: center;
+    z-index: 101;
+    position: fixed;
+    .box-shadow(0 0 36px 4px rgba(0, 0, 0, .17));
+    .sf-menu {
+      display: inline-block;
+      float: none;
+      > li {
+        > ul {
+          top: 40px;
+        }
+      }
+    }
+    @media (max-width: 979px) {
+//      display: none !important;
+      position: relative !important;
+      top: 0 !important;
+      .sf-menu {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 979px) {
+  .pseudoStickyBlock {
+    display: none !important;
+    height: 0 !important;
+  }
+}
+
+
+@import 'bootstrap/less/variables.less';

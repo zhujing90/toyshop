@@ -1,0 +1,77 @@
+@search-font-size: 15px;
+@search-line-height: 16px;
+@search-font-family: @baseFontFamily;
+@search-font-weight: 300;
+@input-padding: 5px 10px;
+@search-font-color: @textColor;
+@search-border: 3px solid @grayLight;
+@search-background: @white;
+@search-border-radius: 4px;
+@search-height: 36px;
+@search-width: 238px;
+@input-width-lower: 48px;
+
+.search-form__h {
+  float: none;
+  display: inline-block;
+  #search-header {
+    overflow: hidden;
+    text-align: left;
+    position: relative;
+    .box-sizing(border-box);
+    border: @search-border;
+    width: @search-width;
+    height: @search-height;
+    background: @search-background;
+    border-radius: @search-border-radius;
+    @media (max-width: 767px) {
+      width: 200px;
+    }
+    .search-form_it {
+      text-transform: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: none;
+      outline: none;
+      .box-shadow(none);
+      background: transparent;
+      height: 100%;
+      margin: 0;
+      padding: @input-padding;
+      font-size: @search-font-size;
+      line-height: @search-line-height;
+      font-family: @search-font-family;
+      font-weight: @search-font-weight;
+      color: @search-font-color;
+      border-radius: @search-border-radius;
+      width: @search-width - @input-width-lower;
+      .box-sizing(border-box);
+      @media (max-width: 479px) {
+        width: 200px - @input-width-lower;
+      }
+    }
+
+    .search-form_is {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 44px;
+      height: 30px;
+      padding: 0;
+      border: none;
+      border-left: 1px solid @grayLight;
+      border-radius: 0;
+      display: block;
+      margin: 0;
+      outline: none;
+      background: url(images/search.png) no-repeat center center;
+      .opacity(100);
+      .box-shadow(none);
+      .transition(all 0.3s ease);
+      &:hover {
+        .opacity(70);
+      }
+    }
+  }
+}
