@@ -8162,7 +8162,7 @@ body #motopress-main.main-holder header.header .menu-wrapper .nav__primary .sf-m
 body #motopress-main.main-holder header.header .menu-wrapper .nav__primary .sf-menu li ul {
 	width:204px;
 	left:50%;
-	margin-left:-102px;
+	margin-left:-72px;
 	background:#181818;
 	top:74px;
 	padding:35px 30px;
@@ -10655,4 +10655,22 @@ body #motopress-main.main-holder #sidebar .widget ul.comments-custom { backgroun
 .google-map-custom-class {
 	height:300px;
 	margin-bottom:20px;
+}
+/*******************************************************************************************************************************************************************************/
+/*****************************************************Start of custom style | Added by ZhuJing @date 2017-08-30*****************************************************************/
+
+body #motopress-main.main-holder .cart-holder .widget_shopping_cart_content .buttons .woo-widget-viewcart,
+body #motopress-main.main-holder .cart-holder .widget_shopping_cart_content .buttons .woo-widget-checkout {
+	background: #181818;
+	display: inline-block;
+	text-transform: none;
+	width: auto;
+	margin: 5px 3px 0 3px;
+	border-radius: 4px;
+	font-size: 16px !important;
+	line-height: 20px !important;
+	color: #fff;
+	font-weight: 500;
+	text-align: center;
+	padding: 3px 8px 3px;
 }
