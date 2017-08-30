@@ -930,7 +930,8 @@ class WC_Form_Handler {
 					exit;
 				}
 			} catch ( Exception $e ) {
-				wc_add_notice( apply_filters( 'login_errors', $e->getMessage() ), 'error' );
+				//wc_add_notice( apply_filters( 'login_errors', $e->getMessage() ), 'error' );
+                wc_add_notice( '<strong>' . __( 'Error:', 'woocommerce' ) . '</strong> ' . $e->getMessage(), 'error' );
 				do_action( 'woocommerce_login_failed' );
 			}
 		}

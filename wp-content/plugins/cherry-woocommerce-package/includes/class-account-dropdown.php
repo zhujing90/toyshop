@@ -99,11 +99,12 @@ class cherry_wc_account_dropdown {
 	 * @return void
 	 */
 	public function default_account_list() {
-		$orders_page = get_option( 'woocommerce_myaccount_page_id' );
-		if ( $orders_page ) {
-			$orders_link = get_permalink( $orders_page );
+		$myaccount_page = get_option( 'woocommerce_myaccount_page_id' );
+
+		if ( $myaccount_page ) {
+			$orders_link = get_permalink( $myaccount_page ). 'orders';
 		} else {
-			$orders_link = '';
+			$orders_link = 'orders';
 		}
 
 		$items = array(

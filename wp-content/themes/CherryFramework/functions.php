@@ -1760,11 +1760,10 @@ function cherry_cookie_banner() {
 
 /************************************Start for Custom functions | 2017-08-xx*******************************************/
 /**
- * 自定义搜索内容
+ * customer search
  */
 if ( !is_admin() ) {
     function searchfilter($query) {
-        //限定对搜索查询和非后台查询设置
         if ($query->is_search && !is_admin() ) {
             $query->set('post_type',array('product','post'));
         }
@@ -1813,5 +1812,62 @@ function update_jquery_for_cherry_framework() {
     wp_register_script('jquery', '/wp-includes/js/jquery/jquery.js', false, false, true);
     wp_enqueue_script('jquery');
 }
+
+// remove weak password rules
+add_action( 'wp_print_scripts', 'wc_ninja_remove_password_strength', 100 );
+function wc_ninja_remove_password_strength() {
+    if ( wp_script_is( 'wc-password-strength-meter', 'enqueued' ) ) {
+        wp_dequeue_script( 'wc-password-strength-meter' );
+    }
+}
+
+// comment error message
+add_action('wp_footer', 'comment_validation_init');
+function comment_validation_init() {
+    if(is_single() && comments_open() ) { ?>
+        <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+        <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                $('#commentform').validate({
+                    rules: {
+                        author: {
+                            required: true,
+                            minlength: 2
+                        },
+                        email: {
+                            required: true,
+                            email: true
+                        },
+                        comment: {
+                            required: true,
+                            minlength: 20
+                        }
+                    },
+                    messages: {
+                        author: {
+                            required: "Please enter Name",
+                            minlength: jQuery.format("Name must have more than {0} character")
+                        },
+                        email: {
+                            required: "Please enter email address.",
+                            email: "Please enter a valid email address."
+                        },
+                        comment: {
+                            required: "Please enter Comment",
+                            minlength: jQuery.format("Comment must have more than {0} character")
+                        }
+                    },
+                    errorElement: "div",
+                    errorPlacement: function(error, element) {
+                        element.after(error);
+                    }
+
+                });
+            });
+        </script>
+        <?php
+    }
+}
+
 
 ?>

@@ -35,7 +35,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php endif; ?>
 
 		<h2><?php _e( 'Login', 'woocommerce' ); ?></h2>
-
 		<form class="woocomerce-form woocommerce-form-login login" method="post">
 
 			<?php do_action( 'woocommerce_login_form_start' ); ?>
