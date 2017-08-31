@@ -12,8 +12,7 @@ if (post_password_required()) { ?>
     <!-- BEGIN Comments -->
 <?php if (have_comments()) : ?>
     <div id="comments" class="comment-holder">
-        <h3 class="comments-h"><?php printf(_n(theme_locals("response"), theme_locals("responses"), get_comments_number(), CURRENT_THEME),
-                number_format_i18n(get_comments_number()), ''); ?></h3>
+        <h3 class="comments-h"><?php printf(_n(theme_locals("response"), theme_locals("responses"), get_comments_number(), CURRENT_THEME), '', ''); ?></h3>
         <div class="pagination">
             <?php paginate_comments_links('prev_text=Prev&next_text=Next'); ?>
         </div>
