@@ -80,9 +80,9 @@ if( function_exists('wc_print_notices') ) {
             <th class="product-remove"></th>
             <th class="product-thumbnail"></th>
             <th class="product-name"><span class="nobr"><?php _e( 'Product Name', 'yit' ) ?></span></th>
-            <?php if( get_option( 'yith_wcwl_price_show' ) == 'yes' ) : ?><th class="product-price"><span class="nobr"><?php _e( 'Unit Price', 'yit' ) ?></span></th><?php endif ?>
-            <?php if( get_option( 'yith_wcwl_stock_show' ) == 'yes' ) : ?><th><span class="nobr"><?php _e( 'Stock Status', 'yit' ) ?></span></th><?php endif ?>
-            <?php if( get_option( 'yith_wcwl_add_to_cart_show' ) == 'yes' ) : ?><th><span class="nobr"></th><?php endif ?>
+            <th class="product-price"><span class="nobr"><?php _e( 'Unit Price', 'yit' ) ?></span></th>
+            <th style="display: block;"><span class="nobr"><?php _e( 'Stock Status', 'yit' ) ?></span></th>
+            <th><span class="nobr">Action</span></th>
         </tr>
         </thead>
         <tbody>

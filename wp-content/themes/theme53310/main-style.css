@@ -1539,7 +1539,7 @@ body #motopress-main.main-holder #content .page a.remove {
 	letter-spacing: -1px;
 	color: #fff !important;
 	background-color: #da1026;
-	border-radius: 7px;
+	border-radius: 8px;
 }
 body #motopress-main.main-holder #content .page a.remove:hover {
 	background-color: #f69fa8;
@@ -2804,8 +2804,9 @@ table.compare-list .add-to-cart td a:hover:after {
 	filter:alpha(opacity=100);
 	visibility:visible;
 }
-table.compare-list .remove td a, table.compare-list a { color:#2c2c2c; }
+table.compare-list .remove td a, table.compare-list a { color:#2c2c2c;  }
 table.compare-list .remove td a:hover, table.compare-list a:hover { color:#fd7716; }
+
 table.compare-list thead th {
 	background:#181818;
 	color:#eee;
@@ -2964,7 +2965,7 @@ table.compare-list .woocommerce-review-link {
 body.woocompare_table >h1 {
 	background:none;
 	color:#2c2c2c;
-	border-bottom:1px solid #D6D6D6;
+	/*border-bottom:1px solid #D6D6D6;*/
 }
 body.woocompare_table {
 	font-size:17px;
@@ -10699,7 +10700,7 @@ body #motopress-main.main-holder .cart-holder .widget_shopping_cart_content .but
 	letter-spacing: -1px;
 	color: #fff;
 	background-color: #da1026;
-	border-radius: 7px;
+	border-radius: 8px;
 	width: 14px;
 	text-align: center;
 	z-index: 99;
@@ -10711,7 +10712,7 @@ body #motopress-main.main-holder #content input.button,
 body #motopress-main.main-holder input[type="submit"],
 body #motopress-main.main-holder input[type="reset"],
 body #motopress-main.main-holder .button-alt {
-	background: #181818;
+	background: #181818 !important;
 	display: inline-block;
 	text-transform: none;
 	width: auto;
@@ -10741,7 +10742,7 @@ body #motopress-main.main-holder .product_list_widget li a.remove {
 	letter-spacing: -1px;
 	color: #fff !important;
 	background-color: #da1026;
-	border-radius: 7px;
+	border-radius: 8px;
 }
 body #motopress-main.main-holder .product_list_widget li a.remove:hover {
 	background-color: #f69fa8;

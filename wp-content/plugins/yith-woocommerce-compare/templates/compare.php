@@ -106,7 +106,7 @@ $localized_table_text = function_exists( 'icl_translate' ) ? icl_translate( 'Plu
             <th>&nbsp;</th>
             <?php foreach( $products as $i => $product ) : $product_class = ( $i % 2 == 0 ? 'odd' : 'even' ) . ' product_' . $product->id ?>
                 <td class="<?php echo $product_class; ?>">
-                    <a href="<?php echo add_query_arg( 'redirect', 'view', $this->remove_product_url( $product->id ) ) ?>" data-product_id="<?php echo $product->id; ?>"><?php _e( 'Remove', 'yit' ) ?> <span class="remove">x</span></a>
+                    <a href="<?php echo add_query_arg( 'redirect', 'view', $this->remove_product_url( $product->id ) ) ?>" data-product_id="<?php echo $product->id; ?>"><?php _e( 'Remove', 'yit' ) ?> <span class="remove"></span></a>
                 </td>
             <?php endforeach ?>
         </tr>

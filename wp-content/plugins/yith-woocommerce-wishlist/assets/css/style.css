@@ -29,7 +29,7 @@
 .wishlist_table {}
 
 .wishlist_table tr td { text-align: center; }
-.wishlist_table tr td.product-thumbnail, .wishlist_table tr td.product-name { text-align: left; }
+.wishlist_table tr td.product-thumbnail, .wishlist_table tr td { text-align: left; }
 .wishlist_table tr td.product-stock-status span.wishlist-in-stock { color: #297E29; }
 .wishlist_table tr td.product-stock-status span.wishlist-out-of-stock { color: #F00; }
 
