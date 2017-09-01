@@ -1526,15 +1526,22 @@ body #motopress-main.main-holder #content .page div.cart-collaterals form.shippi
 body #motopress-main.main-holder #content .page table.cart dl dt { background:none; }
 body #motopress-main.main-holder #content .page table.cart .quantity input[type="button"] { width:25px; }
 body #motopress-main.main-holder #content .page a.remove {
-	background:none;
-	font-size:30px;
-	text-indent:0;
-	line-height:28px;
+	width: 14px;
 	height:auto;
-	width:28px;
-	overflow:hidden;
+	top: 2px;
+	left: 48px;
+	display: inline-block;
+	padding: 1px;
+	font-size: 12px;
+	line-height: 14px;
+	text-align: center;
+	letter-spacing: -1px;
+	color: #fff !important;
+	background-color: #da1026;
+	border-radius: 7px;
 }
 body #motopress-main.main-holder #content .page a.remove:hover {
+	background-color: #f69fa8;
 	background-position:0 -16px;
 	text-decoration:none;
 	color:#9d261d;
@@ -10695,4 +10702,48 @@ body #motopress-main.main-holder .cart-holder .widget_shopping_cart_content .but
 	width: 14px;
 	text-align: center;
 	z-index: 99;
+}
+
+body #motopress-main.main-holder a.button, body #motopress-main.main-holder button.button,
+body #motopress-main.main-holder input.button, body #motopress-main.main-holder #respond input#submit,
+body #motopress-main.main-holder #content input.button,
+body #motopress-main.main-holder input[type="submit"],
+body #motopress-main.main-holder input[type="reset"],
+body #motopress-main.main-holder .button-alt {
+	background: #181818;
+	display: inline-block;
+	text-transform: none;
+	width: auto;
+	margin: 5px 0 0 0;
+	border-radius: 4px;
+	font-size: 18px !important;
+	line-height: 23px !important;
+	color: #fff;
+	font-weight: 500;
+	text-align: center;
+	padding: 3px 18px 3px;
+}
+body #motopress-main.main-holder a.button:after {
+	line-height: 32px;
+}
+
+body #motopress-main.main-holder .product_list_widget li a.remove {
+	width: 14px;
+	height: auto;
+	top: 2px;
+	left: 48px;
+	display: inline-block;
+	padding: 1px;
+	font-size: 12px;
+	line-height: 14px;
+	text-align: center;
+	letter-spacing: -1px;
+	color: #fff !important;
+	background-color: #da1026;
+	border-radius: 7px;
+}
+body #motopress-main.main-holder .product_list_widget li a.remove:hover {
+	background-color: #f69fa8;
+	background-position:0 -16px;
+	text-decoration:none;
 }
